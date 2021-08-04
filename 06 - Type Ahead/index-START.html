@@ -26,16 +26,19 @@ fetch(endpoint)
     cities.push(...data)
   });
 
-function finMatches(wordToMatch, cities) {
-  return cities.filter(palce => {
-    // we need to figure out if the cites matches what was
+function findMatches(wordToMatch, cities) {
+  return cities.filter(place => {
+    // we need to figure out if the cites matches what was searched
     const regex = new RegExp(wordToMatch, 'gi');
     return place.city.match(regex) || place.state.match(regex);
   });
 };
 
 function displayMatches() {
-  console.log(this.value);
+  // console.log(this.value);
+  const matchArray = findMatches(this.value, cities);
+  // console.log(matchArray);
+
 };
 
 const searchInput = document.querySelector('.search');

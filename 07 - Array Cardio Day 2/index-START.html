@@ -28,6 +28,18 @@
     // Array.prototype.some() // is at least one person 19 or older?
     // Array.prototype.every() // is everyone 19 or older?
 
+    const isAdult = people.some(people => {
+      currentYear = new Date().getFullYear()
+      if (currentYear - people.year >= 19  ) {
+        return true;
+      } else {
+        return false;
+      };
+    });
+
+    console.log({isAdult});
+    console.table(isAdult);
+
     // Array.prototype.find()
     // Find is like filter, but instead returns just the one you are looking for
     // find the comment with the ID of 823423

@@ -10,6 +10,7 @@ const ranges = player.querySelectorAll('.player__slider');
 
 // Build our fonctions
 
+
 function togglePlay() {
   if(video.paused) {
     video.play();
@@ -21,7 +22,7 @@ function togglePlay() {
 function updateButton() {
   const icon = this.paused ? '►' : '❚ ❚';
   toggle.textContent = icon;
-  console.log('update');
+  // console.log('update');
 };
 
 function skip() {
@@ -42,6 +43,13 @@ function handleProgress() {
   progressBar.style.flexBasis = `${percent}%`;
 };
 
+
+function scrub(e) {
+  // console.log(e);
+  const scrubTime = (e.offsetX / progress.offsetWidth) * video.duration;
+  video.currentTime = scrubTime;
+};
+
 // Hook up the element listerner
 
 video.addEventListener('click', togglePlay);
@@ -58,6 +66,7 @@ ranges.forEach(range => range.addEventListener('change', handleRangeUpdate));
 ranges.forEach(range => range.addEventListener('mousemove', handleRangeUpdate));
 
 
+progress.addEventListener('click', scrub);
 
 
 

@@ -20,3 +20,5 @@ function togglePlay() {
 };
 
 // Hook up the element listerner
+
+video.addEventListener('click', togglePlay);

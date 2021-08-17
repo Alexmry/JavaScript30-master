@@ -28,11 +28,11 @@
 
     // and we want to make a copy of it.
     const team = players;
-    console.log(players, team);
+    // console.log(players, team);
 
     // You might think we can just do something like this:
     team[3] = "lux";
-    console.log(players, team);
+    // console.log(players, team);
 
     // however what happens when we update that array?
 
@@ -52,6 +52,10 @@
 
     // or use the new ES6 Spread
     const team4 = [...players];
+
+    const team5 = Array.from(players);
+
+    console.log(team5);
 
     // now when we update it, the original one isn't changed
 

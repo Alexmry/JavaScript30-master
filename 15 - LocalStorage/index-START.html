@@ -33,11 +33,18 @@
   function addItem(e) {
     // console.log('hello');
     e.preventDefault();
-    const text = this.querySelector('[name="item"]');
+    const text = (this.querySelector('[name="item"]')).value;
     const item = {
-      text: 'item Name',
+      text: text,
       done: false
-    }
+    };
+    // console.log(item);
+    items.push(item);
+    this.reset();
+  };
+
+  function populateList(plates = [], platesList) {
+
   };
 
   addItems.addEventListener('submit', addItem);

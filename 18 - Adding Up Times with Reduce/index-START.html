@@ -188,9 +188,14 @@
 
   // console.log(timeNodes);
 
-  const seconds = timeNodes.map(node => node.dataset.time);
+  const seconds = timeNodes
+    .map(node => node.dataset.time)
+    .map(timeCode => {
+      const [min, secs] = timeCode.split(':');
+      console.log(min, secs);
+    });
 
-  console.log(seconds);
+  // console.log(seconds);
 
 
 </script>

@@ -56,6 +56,9 @@ getVideo();
 
 
 
+video.addEventListener('canplay', paintToCanvas);
+
+
 
 
 

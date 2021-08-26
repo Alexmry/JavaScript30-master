@@ -21,7 +21,7 @@
   words.appendChild(p);
 
   recognition.addEventListener('result', e => {
-    console.log(e);
+    console.log(e.results);
   });
 
   recognition.start();

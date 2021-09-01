@@ -34,7 +34,7 @@
     document.body.append(highlight);
 
     function highlightLink() {
-      console.log('highlight');
+      console.log(this);
     };
 
     triggers.forEach(a => a.addEventListener('mouseenter', highlightLink));

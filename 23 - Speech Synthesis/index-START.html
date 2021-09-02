@@ -38,6 +38,13 @@
 
   msg.text = document.querySelector('[name="text"]').value;
 
+  function populateVoices() {
+
+  };
+
+
+  speechSynthesis.addEventListener('voiceschanged', populateVoices);
+
 
 
 </script>

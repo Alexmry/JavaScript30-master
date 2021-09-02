@@ -43,6 +43,8 @@
     // console.log(voices);
     const voiceOptions = voices
       .map(voice => `<option value="${voice.name}">${voice.name} (${voice.lang})</option>`)
+      .join('');
+    voicesDropdown.innerHTML = voiceOptions;
   };
 
 

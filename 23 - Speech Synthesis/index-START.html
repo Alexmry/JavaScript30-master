@@ -48,8 +48,13 @@
   };
 
 
-  speechSynthesis.addEventListener('voiceschanged', populateVoices);
+  function setVoice() {
+    console.log('changing voice');
+  };
 
+
+  speechSynthesis.addEventListener('voiceschanged', populateVoices);
+  voicesDropdown.addEventListener('change', setVoice);
 
 
 </script>

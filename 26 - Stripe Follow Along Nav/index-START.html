@@ -142,6 +142,10 @@
     display: none;
   }
 
+  .dropdown .open {
+    opacity: ;
+  }
+
   .trigger-enter .dropdown {
     display: block;
   }
@@ -232,11 +236,13 @@ function handleEnter() {
     console.log(this);
     this.classList.add('trigger-enter-active');
   }, 150);
+  background.classList.add('open');
 };
 
 function handleLeave() {
   // console.log('leave');
-  this.classList.remove('trigger-enter-active');
+  this.classList.remove('trigger-enter', 'trigger-enter-active');
+  background.classList.remove('open');
 };
 
 

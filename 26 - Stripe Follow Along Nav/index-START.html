@@ -242,7 +242,13 @@ function handleEnter() {
 
   // console.log(dropdown);
   const dropdownCoords = dropdown.getBoundingClientRect();
-  console.log(dropdownCoords);
+  const navCoords = nav.getBoundingClientRect();
+  // console.log(dropdownCoords, navCoords);
+
+  const coords = {
+   height: dropdownCoords.height,
+   width: dropdownCoords.width
+  }
 };
 
 function handleLeave() {

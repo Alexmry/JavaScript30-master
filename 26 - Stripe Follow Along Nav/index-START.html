@@ -240,7 +240,9 @@ function handleEnter() {
 
   const dropdown = this.querySelector('.dropdown');
 
-  console.log(dropdown);
+  // console.log(dropdown);
+  const dropdownCoords = dropdown.getBoundingClientRect();
+  console.log(dropdownCoords);
 };
 
 function handleLeave() {

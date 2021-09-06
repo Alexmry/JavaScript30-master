@@ -48,7 +48,8 @@ slider.addEventListener('mousedown', (e) => {
   // console.log(e);
   // console.log(e.pageX);
   startX = e.pageX - slider.offsetLeft;
-  console.log(startX);
+  // console.log(startX);
+  scrollLeft = slider.scrollLeft;
 });
 
 slider.addEventListener('mouseleave', () => {

@@ -42,22 +42,28 @@ let isDown = false;
 let startX;
 let scrollLeft;
 
-slider.addEventListener('mousedown', () => {
+slider.addEventListener('mousedown', (e) => {
   isDown = true;
+  slider.classList.add('active');
+  // console.log(e);
+  console.log(e.pageX);
+  startX = e.pageX - slider.offsetLeft
 });
 
 slider.addEventListener('mouseleave', () => {
   isDown = false;
+  slider.classList.remove('active');
 });
 
 slider.addEventListener('mouseup', () => {
   isDown = false;
+  slider.classList.remove('active');
 });
 
 slider.addEventListener('mousemove', () => {
   if (!isDown) return; // stop the fonction from running;
-  console.log(isDown);
-  console.log('do work');
+  // console.log(isDown);
+  // console.log('do work');
 });
 
 

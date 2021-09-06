@@ -62,11 +62,18 @@ slider.addEventListener('mouseup', () => {
   slider.classList.remove('active');
 });
 
-slider.addEventListener('mousemove', () => {
+slider.addEventListener('mousemove', (e) => {
   if (!isDown) return; // stop the fonction from running;
   // console.log(isDown);
   // console.log('do work');
-  console.log(startX);
+  // console.log(startX);
+  e.preventDefault();
+  const x = e.pageX - slider.offsetLeft;
+  // console.log({x, startX});
+  const walk = x - startX;
+  // console.log(walk);
+  slider.scrollLeft = walk
+
 });
 
 

@@ -32,7 +32,7 @@
     // console.log(height);
     const playbackRate = percent * (max - min) + min;
     bar.style.height = height;
-    bar.textContent = playbackRate;
+    bar.textContent = playbackRate.toFixed(2) + 'x';
 
 
 

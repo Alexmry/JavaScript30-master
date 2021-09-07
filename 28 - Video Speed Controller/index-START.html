@@ -17,13 +17,14 @@
 <script>
 
   const speed = document.querySelector('.speed');
-  const bar = document.querySelector('.speed-bar');
+  const bar = speed.querySelector('.speed-bar');
   const video = document.querySelector('.flex');
 
 
-  speed.addEventListener('mousemove', (e) => {
+  speed.addEventListener('mousemove', function(e) {
     // console.log(e);
-    const Y = e.pageY - this.offsetTop;
+    const y = e.pageY - this.offsetTop;
+    console.log(y);
   });
 
 </script>

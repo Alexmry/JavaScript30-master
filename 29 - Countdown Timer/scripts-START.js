@@ -1,4 +1,5 @@
 let countdown;
+const timerDisplay = document.querySelector('.display__time-left');
 
 function timer(seconds) {
   const now = Date.now();
@@ -23,5 +24,7 @@ function displayTimeLeft(seconds) {
   const remainderSeconds = seconds % 60;
   // console.log(seconds);
   // console.log(minutes);
-  console.log({minutes, remainderSeconds});
+  // console.log({minutes, remainderSeconds});
+  const display = `${minutes}:${remainderSeconds}`;
+  timerDisplay.textContent = display;
 };

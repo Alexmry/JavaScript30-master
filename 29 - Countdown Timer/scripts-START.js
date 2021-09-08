@@ -25,6 +25,6 @@ function displayTimeLeft(seconds) {
   // console.log(seconds);
   // console.log(minutes);
   // console.log({minutes, remainderSeconds});
-  const display = `${minutes}:${remainderSeconds}`;
+  const display = `${minutes}:${remainderSeconds < 10 ? '0' : ''}${remainderSeconds}`;
   timerDisplay.textContent = display;
 };

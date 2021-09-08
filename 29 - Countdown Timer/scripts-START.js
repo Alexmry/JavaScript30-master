@@ -43,7 +43,9 @@ function displayEndTime(timestamp) {
 
 function startTimer() {
   // console.log(this.dataset.time);
-  const seconds = this.dataset.time;
+  const seconds = parseInt(this.dataset.time);
+  // console.log(seconds);
+  timer(seconds);
 };
 
 buttons.forEach(button => button.addEventListener('click', startTimer));

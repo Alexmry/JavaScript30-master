@@ -47,9 +47,15 @@
     // console.log(holes.length);
     const index = Math.floor(Math.random() * holes.length);
     const hole = holes[index];
-    console.log(hole);
+    if (hole === lastHole) {
+      // console.log('same hole than last time');
+      return randomHole(holes);
+    };
+
+    // console.log(hole);
 
     lastHole = hole;
+    return hole;
   };
 
 

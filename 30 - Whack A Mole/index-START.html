@@ -38,8 +38,14 @@
   const moles = document.querySelectorAll('.mole');
 
   function randomTime(min, max) {
-    return Math.random() * (max - min) + min;
-  }
+    return Math.round(Math.random() * (max - min) + min);
+  };
+
+
+  function randomHole(holes) {
+    console.log(holes.length);
+
+  };
 
 
 </script>
